@@ -33,17 +33,20 @@ Nota:
 
 
 url vista registro: http://localhost:8000/
-![image](https://github.com/edmoredev/votaciones/assets/125479887/6dfeb6a1-434e-419f-aa26-7207e9a702c7)
+
+![image](https://github.com/edmoredev/sistemaVotacion/assets/125479887/49ee5f2c-e7c2-478f-911e-52e18b617663)
 
 url vista votar:http://localhost:8000/votar/
-![image](https://github.com/edmoredev/votaciones/assets/125479887/7495020f-b4a4-4438-9cfa-09aec2fcc7d1)
+![image](https://github.com/edmoredev/sistemaVotacion/assets/125479887/7798cd30-88a6-4a06-9b33-4597623123bd)
+
 
 
 #Docker
 
 * Para este proyecto se realiza los campos de Tipo Documento, genero y localidad normalizadas, lo cual se agrega los siguientes datos desde el administrador de Django, por tal motivo se debe crear el superUser y agregar la información para la vista de la siguiente manera
 
-![image](https://github.com/edmoredev/votaciones/assets/125479887/5994efca-e152-44af-af80-6b0d32ea0e0e)
+![image](https://github.com/edmoredev/sistemaVotacion/assets/125479887/aefa164d-52ad-4dd1-a52e-5d6b7c0a9e0d)
+
 
 Genero:
 * Femenino
@@ -64,27 +67,24 @@ Antes de registrar debemos crear el superusuario
 ingresa el siguiente comando 
 - docker ps, para saber el nombre del proyecto docker
 
-![image](https://github.com/edmoredev/votaciones/assets/125479887/2e62156c-5b8d-4422-80a1-2b1b88386bd5)
+![image](https://github.com/edmoredev/sistemaVotacion/assets/125479887/e541cf44-40cf-441d-b15d-75ed79e7d33d)
+
 
 ejecutamos
 - docker exec -it nombre del doker /bin/sh
 
-![image](https://github.com/edmoredev/votaciones/assets/125479887/f65ab2bc-3023-46bb-8a6d-eefb8207eb6b)
-
+![image](https://github.com/edmoredev/sistemaVotacion/assets/125479887/16eec3fd-a9fe-4b56-9515-f5e50620b95b)
 
 - python manage.py createsuperuser
 
-![image](https://github.com/edmoredev/votaciones/assets/125479887/7b3e0df8-aa60-4b59-80d7-79b78d3075cf)
-
 Ingresamos los datos de usuario, correo y password
-
-
+![image](https://github.com/edmoredev/sistemaVotacion/assets/125479887/fe898b3c-b522-46f9-9e5b-b3ee4a09685e)
 
 Después de las migraciones
 
 - python manage.py migrate
 
-![image](https://github.com/edmoredev/votaciones/assets/125479887/b3fedb38-cf87-4b84-920f-5aa0080dc6e9)
+
 
 
 
