@@ -1,0 +1,91 @@
+<div class="form-group">
+  <input
+    type="text"
+    id="txtNoDocumento"
+    name="txtNoDocumento"
+    class="form-control"
+    placeholder="No Documento"
+    minlength="7"
+    maxlength="20"
+    required
+  />
+</div>
+<div class="form-group">
+  <select
+    class="form-control"
+    id="select-tipo-documento"
+    name="select-tipo-documento"
+    required
+  >
+    <option value="">Tipo Documento</option>
+
+    {% for td in tipoDocumento %}
+    <option value="{{td.id_tipo_documento}}">
+      {{td.nombre_tipo_documento}}
+    </option>
+    {% endfor %}
+  </select>
+</div>
+<div class="form-group">
+  <input
+    type="text"
+    id="txtNombre"
+    name="txtNombre"
+    class="form-control"
+    placeholder="Nombres"
+    maxlength="50"
+    required
+  />
+</div>
+<div class="form-group">
+  <input
+    type="text"
+    id="txtApellidos"
+    name="txtApellidos"
+    class="form-control"
+    placeholder="Apellidos"
+    maxlength="50"
+    required
+  />
+</div>
+{% if candidatoItem == True %}
+<div class="form-group">
+  <input
+    type="text"
+    id="txtPartido"
+    name="txtPartido"
+    class="form-control"
+    placeholder="Partido"
+    maxlength="50"
+    required
+  />
+</div>
+{% endif %}
+
+<div class="form-group">
+  <select class="form-control" id="select-genero" name="select-genero" required>
+    <option value="">Genero</option>
+    {% for g in genero %}
+    <option value="{{g.id_genero}}">{{g.item_genero}}</option>
+    {% endfor %}
+  </select>
+</div>
+<div class="form-group">
+  <select
+    class="form-control"
+    id="select-localidad"
+    name="select-localidad"
+    required
+  >
+    <option value="">Localidad</option>
+
+    {% for l in localidad %}
+    <option value="{{l.id_localidad}}">{{l.nombre_localidad}}</option>
+    {% endfor %}
+  </select>
+</div>
+<div class="form-group">
+  <button type="submit" class="btn btn-success btn-block text-white">
+    Guardar
+  </button>
+</div>

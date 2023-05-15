@@ -1,0 +1,57 @@
+erDiagram
+
+
+votante{
+varchar(20) noDocumento_votante PK
+varcahr(50) nombres_votante
+varchar(50) apellidos_votante
+varchar(20) id_tipo_documento_id FK "Ref:genero(id_tipo_documento)"
+varchar(10) id_genero_votante  FK "Ref:genero(id_genero)"
+varchar(20) id_localidad_votante FK "Ref:localidad(id_localidad)"
+boolean estado
+}
+
+tipodocumento{
+int id_tipo_documento
+varchar(50) nombre_tipo_documento
+boolean estado
+}
+
+candidato{
+varchar(20) noDocumento_candidato PK
+varcahr(50) nombres_candidato
+varchar(50) apellidos_candidato
+varchar(20) id_tipo_documento
+varchar(50) partido_candidato 
+varchar(10) id_genero_candidato FK "Ref:genero(id_genero)"
+varchar(20) id_localidad_candidato FK "Ref:localidad(id_localidad)"
+boolean estado
+}
+
+localidad{
+int id_localidad
+varchar(50) nombre_localidad
+boolean estado
+}
+
+genero{
+int id_genero
+varchar(20) item_genero
+}
+
+voto{
+int id_voto
+varchar(20) no_documento_votante
+varchar(20) no_documento_candidato
+boolean estado
+}
+
+
+votante }o--||localidad : id_localidad_votante
+tipodocumento ||--o{ votante: id_tipo_documento_id
+candidato }o--|| tipodocumento:id_tipo_documento
+candidato }o--||localidad : id_localidad_candidato
+
+
+genero  ||--o{candidato : id_genero_candidato
+genero  ||--o{votante : id_genero_votante

@@ -1,0 +1,25 @@
+flowchart LR
+
+V(votante)
+TD(tipodocumento)
+C(candidato)
+L(localidad)
+G(genero)
+PERLOC{pertenece}
+PERLOC1{pertenece}
+PERGEN{pertenece}
+PERGEN1{pertenece}
+TIE{tiene}
+TIE1{tiene}
+
+
+L ---|1| PERLOC1 & PERLOC
+PERLOC1 ---|N| V
+V ---|N| PERGEN
+PERGEN ---|1| G
+PERLOC ---|N| C
+C ---|N| PERGEN1 & TIE
+PERGEN1 ---|1| G
+TIE ---|1| TD
+TD ---|1| TIE1
+TIE1 ---|N|V
